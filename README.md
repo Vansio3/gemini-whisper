@@ -50,25 +50,12 @@ A desktop application for real-time dictation and transcription using Google's G
     pip install -r requirements.txt
     ```
 
-4.  **Configure the Application:**
-    *   Copy the example configuration file:
-        ```bash
-        cp dictation_config.example.json dictation_config.json
-        ```
-        (On Windows, you might use `copy dictation_config.example.json dictation_config.json`)
-    *   Open `dictation_config.json` in a text editor.
-    *   Find the `"api_key"` field and replace `"YOUR_GEMINI_API_KEY_HERE"` (or the empty string) with your actual Google Gemini API key.
-        ```json
-        {
-            "settings": {
-                "api_key": "YOUR_ACTUAL_GEMINI_API_KEY_HERE",
-                "model": "gemini-1.5-flash-latest",
-                // ... other settings ...
-            },
-            // ... api_stats ...
-        }
-        ```
-    *   Save the `dictation_config.json` file. **This file is gitignored and will not be committed.**
+4.  **Initial Configuration (API Key):**
+    *   The `dictation_config.json` file (which stores your settings and API key) will be created automatically in the project's root directory when you first run the application or save settings. 
+    *   When you run the application for the first time (see "Running the Application" below), the main window will appear.
+    *   Enter your **Google Gemini API Key** into the "Google API Key" field.
+    *   You can also select your preferred Gemini Model and review/customize the System Prompt at this stage.
+    *   Click the **"Save Settings & Apply API Key"** button. This will save your API key and other settings to `dictation_config.json`.
 
 5.  **Place Sound Assets (Optional):**
     If you want different sound cues for dictation start/stop:
