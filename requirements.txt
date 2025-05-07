@@ -1,0 +1,11 @@
+google-generativeai
+sounddevice
+soundfile
+numpy
+keyboard
+pyautogui
+scipy
+pystray
+Pillow
+pygame
+ttkthemes
